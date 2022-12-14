@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registro de presión arterial, es una aplicación para ayudar a las personas a llevar un historial de las medidas de presión tomadas para llevar un seguimiento de su salud arterial">
+    <title>Seguimiento de estado de la presión arterial</title>
+
+    <!-- Normalize -->
+    <link href="./css/normalize.css" rel="preconnect" as="stylesheet">
+    <link href="./css/normalize.css" rel="stylesheet">
+
+    <!-- Hoja de estilo CSS -->
+    <link href="css/styles.css" rel="preconnect" as="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Menu de navegacion -->
+    <nav id="navegador">
+        <a id="nuevo" class="btn-nav" href="#">
+            <img src="./icons/anadir.png" alt="Nuevo registro">
+            <!-- <p>Nuevo</p> -->
+        </a>
+        <a id="registros" class="btn-nav" href="#">
+            <img src="./icons/expediente.png" alt="Medidas registradas">
+            <!-- <p>Registros</p> -->
+        </a>
+        <a id="informacion" class="btn-nav" href="#">
+            <img src="./icons/registros.png" alt="Valores normales">
+            <!-- <p>Valores normales</p> -->
+        </a>
+        <a id="vaciar" class="btn-nav" href="#">
+            <img src="./icons/eliminar.png" alt="Eliminar">
+            <!-- <p>Vaciar registros</p> -->
+        </a>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <h1>Registro de presión arterial</h1>
+        <section>
+            <form id="formulario" class="aparecer">
+                <input type="number" placeholder="Ingrese su Edad">
+                <input type="text" placeholder="Ingrese su Presión. Ejemplo: 120/70">
+                <input type="submit" value="Registrar medida">
+            </form>
+        </section>
+    </main>  
+
+    <script src="./js/app.js" type="module"></script>
+</body>
+</html>
