@@ -307,7 +307,7 @@ document.addEventListener( 'DOMContentLoaded', ()=>{
             
             const fechaObj = new Date();
             const dia = fechaObj.getDate() > 9 ? fechaObj.getDate() : `0${fechaObj.getDate()}` ;
-            const mes = fechaObj.getMonth()+1 > 9 ? fechaObj.getMonth()+1 : `0${fechaObj.getMonth()}`;
+            const mes = fechaObj.getMonth()+1 > 9 ? fechaObj.getMonth()+1 : `0${fechaObj.getMonth()+1}`;
             const year = fechaObj.getFullYear();
             const hora = fechaObj.getHours() > 9 ? fechaObj.getHours() : `0${fechaObj.getHours()}`;
             const minutes = fechaObj.getMinutes() > 9 ? fechaObj.getMinutes() : `0${fechaObj.getMinutes()}`;
