@@ -1,43 +1,76 @@
-# Registro de presión arterial
+# ❤️ Seguimiento de presión arterial
+### Aplicación web para registro simple y accesible de presión arterial
 
-La app consiste en llevar el registro de las medidas de presión arterial realizadas con un monitor de presión arterial o también llamado tensimetro
-para generar un historial de medidas que puedan ser consultadas por meses y así poder llevar un control de la salud arterial, según la interpretación
-de los datos hecha por un médico.
+Esta aplicación nació para resolver un problema real: mis padres necesitaban llevar un registro constante de su presión arterial por recomendación médica, pero olvidaban dónde anotaban las mediciones.
 
-# Uso
+En lugar de sugerirles otra app compleja, decidí construir una solución simple, clara y diseñada específicamente para personas mayores.
 
-## Registrar una medida de presión
+---
 
-Para agregar una medida de presión presione el boton el icono siguiente:
+## 🎯 Objetivo del proyecto
 
-https://github.com/rvjosecarlos/app-presionarterial/blob/master/icons/anadir.png?raw=true
+- Crear una interfaz extremadamente simple y accesible  
+- Garantizar persistencia de datos sin depender de backend  
+- Entender profundamente cómo funciona el DOM antes de usar frameworks  
+- Resolver un problema real con una solución práctica  
 
-  1) Ingrese la edad del usuario
-  2) Ingrese la medida de presión tomada en un formato como el siguiente: "120/80"
+---
 
-La medida quedara registrada en el localStorage del dispositivo por lo que cada que se use la aplicación los datos persistirán
+## 🛠 Stack Tecnológico
 
-## Ver medidas registradas
+- **JavaScript Vanilla (ES6+)**
+- **Manipulación directa del DOM (createElement, appendChild, etc.)**
+- **LocalStorage para persistencia**
+- **HTML5 + CSS3**
+- Sin frameworks
+- Sin librerías externas
+- Sin build tools
+- Cero dependencias
 
-Para ver las medidas registradas presione el boton con el icono siguiente:
+Este proyecto fue desarrollado intencionalmente sin frameworks para reforzar fundamentos: manejo de estado, renderizado manual y control total del flujo de la aplicación.
 
-https://github.com/rvjosecarlos/app-presionarterial/blob/master/icons/expediente.png?raw=true
+---
 
-Por defecto se desplagarán todos los registros realizados y también se mostrará una caja de opciones que contiene los meses de año para realizar un filtrado
-de registros por mes.
+## ✨ Características principales
 
-Cada registro cuenta con un botón "Eliminar" para quitarlo de la lista. Éste botón elimina unicamente el card donde se encuentra.
+- 📝 Registro de edad y presión arterial (formato 120/80)  
+- 💾 Persistencia automática en LocalStorage  
+- 🔄 Renderizado dinámico según estado de la aplicación  
+- ⚡ Carga instantánea (sin dependencias externas)  
 
-## Ver las categorías y rangos de valores de presión Sistólica y Diastólica
+---
 
-Para ver las categorías de los rangos de la presión Sistólica y Diastólica presione el boton con el icono siguiene: 
+## 🧠 Decisiones Técnicas
 
-https://github.com/rvjosecarlos/app-presionarterial/blob/master/icons/registros.png?raw=true
+- **Gestión de estado manual:**  
+  Las mediciones se almacenan en un array en memoria sincronizado con LocalStorage.
 
-Algunos parametros registrados pueden no entrar dentro del rango de categorías por lo que es recomendable consultar a un médico para su interpretación
+- **Renderizado imperativo:**  
+  La UI se actualiza mediante creación y reemplazo de nodos del DOM sin templating engines.
 
-## Eliminar todos los registros
+- **Validación de formato:**  
+  Se asegura que la presión cumpla el patrón sistólica/diastólica antes de guardarse.
 
-Para eliminar todos los registros guardados en localstorage presione el boton con el icono siguiente: 
+Este enfoque demuestra comprensión de cómo funcionan internamente frameworks modernos como React (estado → renderizado → actualización del DOM).
 
-https://github.com/rvjosecarlos/app-presionarterial/blob/master/icons/eliminar.png?raw=true
+---
+
+## 📸 Captura
+
+![Registro de presión arterial](https://res.cloudinary.com/domj6qqht/image/upload/v1771371216/app-pa_nuh0qh.gif)
+
+---
+
+## 🚀 Demo en vivo
+
+🔗 **[Probar la aplicación](https://app-presionarterial.vercel.app/)**
+
+---
+
+## 📦 Cómo ejecutarla localmente
+
+```bash
+git clone https://github.com/rvjosecarlos/app-presionarterial.git
+cd tu-carpeta-de-clonacion
+open index.html
+
